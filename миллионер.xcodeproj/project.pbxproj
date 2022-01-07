@@ -16,6 +16,13 @@
 		AD00B82A277DDDBC00097D61 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD00B829277DDDBC00097D61 /* MainViewController.swift */; };
 		AD00B82E277DDFA800097D61 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD00B82D277DDFA800097D61 /* GameViewController.swift */; };
 		AD00B830277DE63800097D61 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD00B82F277DE63800097D61 /* Question.swift */; };
+		AD2121A42788DC4800D93AAD /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2121A32788DC4800D93AAD /* R.swift */; };
+		AD2121A82788DFD300D93AAD /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2121A72788DFD300D93AAD /* Results.swift */; };
+		AD2121AA2788E01800D93AAD /* ResultsCareTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2121A92788E01800D93AAD /* ResultsCareTaker.swift */; };
+		AD2121AC2788E0EF00D93AAD /* GameShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2121AB2788E0EF00D93AAD /* GameShared.swift */; };
+		AD2121AE2788E1FC00D93AAD /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2121AD2788E1FC00D93AAD /* GameSession.swift */; };
+		AD2121B02788E36100D93AAD /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2121AF2788E36100D93AAD /* Results.storyboard */; };
+		AD2121B22788E37300D93AAD /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2121B12788E37300D93AAD /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,13 @@
 		AD00B829277DDDBC00097D61 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AD00B82D277DDFA800097D61 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		AD00B82F277DE63800097D61 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		AD2121A32788DC4800D93AAD /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
+		AD2121A72788DFD300D93AAD /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		AD2121A92788E01800D93AAD /* ResultsCareTaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCareTaker.swift; sourceTree = "<group>"; };
+		AD2121AB2788E0EF00D93AAD /* GameShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameShared.swift; sourceTree = "<group>"; };
+		AD2121AD2788E1FC00D93AAD /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		AD2121AF2788E36100D93AAD /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
+		AD2121B12788E37300D93AAD /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				AD00B80F277DDA3300097D61 /* AppDelegate.swift */,
-				AD00B82C277DDF8900097D61 /* Game */,
 				AD00B82B277DDDDB00097D61 /* Main */,
+				AD2121B32788E37700D93AAD /* Results */,
+				AD2121A52788DF9000D93AAD /* Questions */,
+				AD2121A62788DFAF00D93AAD /* Results */,
+				AD00B82C277DDF8900097D61 /* Game */,
 				AD00B811277DDA3300097D61 /* SceneDelegate.swift */,
 				AD00B818277DDA3600097D61 /* Assets.xcassets */,
 				AD00B81A277DDA3600097D61 /* LaunchScreen.storyboard */,
@@ -86,10 +103,39 @@
 			isa = PBXGroup;
 			children = (
 				AD00B827277DDBB900097D61 /* Game.storyboard */,
-				AD00B82F277DE63800097D61 /* Question.swift */,
+				AD2121AB2788E0EF00D93AAD /* GameShared.swift */,
+				AD2121AD2788E1FC00D93AAD /* GameSession.swift */,
 				AD00B82D277DDFA800097D61 /* GameViewController.swift */,
+				AD2121A32788DC4800D93AAD /* R.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		AD2121A52788DF9000D93AAD /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				AD00B82F277DE63800097D61 /* Question.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		AD2121A62788DFAF00D93AAD /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				AD2121A72788DFD300D93AAD /* Results.swift */,
+				AD2121A92788E01800D93AAD /* ResultsCareTaker.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		AD2121B32788E37700D93AAD /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				AD2121AF2788E36100D93AAD /* Results.storyboard */,
+				AD2121B12788E37300D93AAD /* ResultsViewController.swift */,
+			);
+			name = Results;
+			path = Main/Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD00B81C277DDA3600097D61 /* LaunchScreen.storyboard in Resources */,
+				AD2121B02788E36100D93AAD /* Results.storyboard in Resources */,
 				AD00B819277DDA3600097D61 /* Assets.xcassets in Resources */,
 				AD00B828277DDBB900097D61 /* Game.storyboard in Resources */,
 				AD00B826277DDA7D00097D61 /* Main.storyboard in Resources */,
@@ -163,9 +210,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2121B22788E37300D93AAD /* ResultsViewController.swift in Sources */,
+				AD2121A42788DC4800D93AAD /* R.swift in Sources */,
 				AD00B830277DE63800097D61 /* Question.swift in Sources */,
+				AD2121AE2788E1FC00D93AAD /* GameSession.swift in Sources */,
 				AD00B82E277DDFA800097D61 /* GameViewController.swift in Sources */,
+				AD2121A82788DFD300D93AAD /* Results.swift in Sources */,
 				AD00B810277DDA3300097D61 /* AppDelegate.swift in Sources */,
+				AD2121AA2788E01800D93AAD /* ResultsCareTaker.swift in Sources */,
+				AD2121AC2788E0EF00D93AAD /* GameShared.swift in Sources */,
 				AD00B812277DDA3300097D61 /* SceneDelegate.swift in Sources */,
 				AD00B82A277DDDBC00097D61 /* MainViewController.swift in Sources */,
 			);

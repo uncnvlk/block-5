@@ -25,8 +25,15 @@ class GameViewController: UIViewController {
     var Questions: [Question] = []
     
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setQuestion()
+        setQuestionOnScreen(round: numberOfRound)
+    }
+    
     private func setQuestion (){
-        var item: Question! = Question(question: "Какой город стал столицей России в 1712 году?", ans1: "Москва", ans2: "Суздаль", ans3: "Хельсинки", ans4: "Санкт-Петербург", rightAnsw: "Москва")
+        var item: Question! = Question(question: "Какой город стал столицей России в 1712 году?", ans1: "Москва", ans2: "Суздаль", ans3: "Хельсинки", ans4: "Санкт-Петербург", rightAnsw: "Санкт-Петербург")
 
         Questions.append(item)
         
@@ -68,51 +75,72 @@ class GameViewController: UIViewController {
         
     }
     
-    
-    @IBAction func pressOnButton1(_ sender: Any) {
-        
-        if Questions[numberOfRound].ans1 == Questions[numberOfRound].rightAnsw {
-            //тут переход на новый вопрос
+    func checkAnswer (ans: String) -> Bool{
+        if ans == Questions[numberOfRound].rightAnsw {
+            return true
         }
         else {
-            //конец игры
+            return false
+        }
+    }
+    
+    func trueAns() {
+        numberOfRound += 1
+        
+        
+        if numberOfRound == Questions.count {
+            let score = numberOfRound
+            let result = Results(data: Date(), score: score)
+            Game.shared.addResults(result)
+            
+            let MainVC = R.Storyboard.Main.instantiateInitialViewController()
+            MainVC?.modalPresentationStyle = .fullScreen
+            self.present(MainVC!, animated: true)
+        } else {
+            setQuestionOnScreen(round: numberOfRound)
+        }
+    }
+    
+    func falseAns() {
+        let score = numberOfRound
+        let result = Results(data: Date(), score: score)
+        Game.shared.addResults(result)
+        let MainVC = R.Storyboard.Main.instantiateInitialViewController()
+        MainVC?.modalPresentationStyle = .fullScreen
+        self.present(MainVC!, animated: true)
+    }
+    
+    @IBAction func pressOnButton1(_ sender: Any) {
+        if checkAnswer(ans: Questions[numberOfRound].ans1) == true {
+            trueAns()
+        } else {
+            falseAns()
         }
     }
     
     @IBAction func pressOnButton2(_ sender: Any) {
+        if checkAnswer(ans: Questions[numberOfRound].ans2) == true {
+            trueAns()
+        } else {
+            falseAns()
+        }
         
-        if Questions[numberOfRound].ans2 == Questions[numberOfRound].rightAnsw {
-            //тут переход на новый вопрос
-        }
-        else {
-            //конец игры
-        }
     }
     
     @IBAction func pressOnButton3(_ sender: Any) {
-        
-        if Questions[numberOfRound].ans3 == Questions[numberOfRound].rightAnsw {
-            //тут переход на новый вопрос
-        }
-        else {
-            //конец игры
+        if checkAnswer(ans: Questions[numberOfRound].ans3) == true {
+            trueAns()
+        } else {
+            falseAns()
         }
     }
     
     @IBAction func pressOnButton4(_ sender: Any) {
-        
-        if Questions[numberOfRound].ans4 == Questions[numberOfRound].rightAnsw {
-            //тут переход на новый вопрос
+        if checkAnswer(ans: Questions[numberOfRound].ans4) == true {
+            trueAns()
+        } else {
+            falseAns()
         }
-        else {
-            //конец игры
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setQuestion()
-        setQuestionOnScreen(round: numberOfRound)
     }
 }
 

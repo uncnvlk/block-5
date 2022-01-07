@@ -28,6 +28,9 @@
                                 <rect key="frame" x="120" y="528" width="174" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Результаты"/>
+                                <connections>
+                                    <segue destination="INQ-Nk-0Ql" kind="presentation" modalPresentationStyle="fullScreen" id="yhL-wA-iVY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кто хочет стать миллионером?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNx-7T-fZP">
                                 <rect key="frame" x="40" y="134" width="334" height="72"/>
@@ -64,6 +67,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9w6-qA-TYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-22" y="332"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="Dr2-DT-sd3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Results" id="INQ-Nk-0Ql" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mYC-0z-2iK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98c-dE-Q6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="397"/>
         </scene>
     </scenes>
     <resources>
